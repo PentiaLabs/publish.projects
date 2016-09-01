@@ -1,0 +1,22 @@
+{
+    "configurationTransform": {
+      "AlwaysApplyName": "always"
+    },
+    "msbuild": {
+      "showError": false,
+      "showStandardOutput": false,
+      "toolsversion": 14.0,
+      "verbosity": "minimal"
+    },
+    "frontendBuilder": {
+      "location": "./src/context/frontend/frontend"
+    },
+    "configs": [
+      {
+        "name": "debug",
+        "rootFolder": "C:\\websites\\pentia.boilerplate.local",
+        "websiteRoot" :"C:\\websites\\pentia.boilerplate.local\\Website",
+        "websiteDataRoot" :"C:\\websites\\pentia.boilerplate.local\\Website\\Data"
+      }
+    ]
+}

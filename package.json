@@ -1,0 +1,49 @@
+{
+  "name": "pentia-builder",
+  "version": "0.0.22",
+  "private": false,
+  "description": "Pentia Sitecore builder",
+  "keywords": [
+    "sitecore",
+    "gulp"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.git@github.com:PentiaLabs/Pentia.Builder.git"
+  },
+  "maintainers": [
+    "Pentia <dev@pentia.dk> (http://www.pentia.dk)"
+  ],
+  "scripts": {
+    "gulp": "./node_modules/.bin/gulp"
+  },
+  "bin": {
+    "pentia-builder": "./bin/pentia-builder.js"
+  },
+  "dependencies": {
+    "gulp": "^3.9.0",
+    "gulp-debug": "^2.1.2",
+    "gulp-notify": "^2.2.0",
+    "gulp-util": "^3.0.7",
+    "lodash": "^4.1.0",
+    "nopt": "^3.0.6",
+    "run-sequence": "^1.1.5",
+    "shelljs": "^0.5.3",
+    "rimraf": "^2.4.3",
+    "require-dir": "^0.3.0",
+    "gulp-foreach": "^0.1.0",
+    "gulp-msbuild": "0.2.13",
+    "gulp-watch": "^4.3.5",
+    "gulp-rename": "^1.2.2",
+    "gulp-newer": "^1.0.0",
+    "minimist": "^1.2.0",
+    "gulp-rimraf": "^0.2.0"
+  },
+  "bugs": {
+    "url": "https://github.com/PentiaLabs/Pentia.Builder/issues"
+  },
+  "homepage": "https://github.com/PentiaLabs/Pentia.Builder#readme",
+  "main": "build.js",
+  "author": "Anders Laub <alc@pentia.dk>",
+  "license": "ISC"
+}
