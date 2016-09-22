@@ -1,8 +1,8 @@
 {
-  "name": "pentia-builder",
+  "name": "publish-projects",
   "version": "0.0.22",
   "private": false,
-  "description": "Pentia Sitecore builder",
+  "description": "runs publish on csproj files via msbuild",
   "keywords": [
     "sitecore",
     "gulp"
@@ -18,7 +18,7 @@
     "gulp": "./node_modules/.bin/gulp"
   },
   "bin": {
-    "pentia-builder": "./bin/pentia-builder.js"
+    "publish-projects": "./bin/publish-projects.js"
   },
   "dependencies": {
     "gulp": "^3.9.0",
@@ -43,7 +43,7 @@
     "url": "https://github.com/PentiaLabs/Pentia.Builder/issues"
   },
   "homepage": "https://github.com/PentiaLabs/Pentia.Builder#readme",
-  "main": "build.js",
-  "author": "Anders Laub <alc@pentia.dk>",
+  "main": "gulpfile.js",
+  "author": "Emil Klein <eok@pentia.dk>",
   "license": "ISC"
 }

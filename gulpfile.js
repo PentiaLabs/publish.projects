@@ -18,12 +18,6 @@ var args = nopt({
 });
 
 build.setEnvironment(args.env);
-  
-gulp.task("setup", ["clean-rootFolder"], function (callback) {
-  runSequence(
-    "install-packages"
-    , callback);
-});
 
 gulp.task("set-temp-output-folder", function (callback) {
   var tmpDir = "./tmp";
@@ -37,23 +31,6 @@ gulp.task("set-temp-output-folder", function (callback) {
   config.websiteRoot = path.resolve(tmpDir);
   callback();
 });
-
-gulp.task("create-full-package", function (callback) {
-  runSequence(
-    "set-temp-output-folder",
-    "install-packages",
-    "publish-all-layers-for-package",
-    "apply-xml-transform"
-    , callback);
-});
-
-gulp.task("create-release-package", function (callback) {
-  runSequence(
-    "set-temp-output-folder",
-    "publish-all-layers-for-package"
-    , callback);
-});
-
 
 gulp.task("default", function () {
 	console.log("You need to specifiy a task.");
