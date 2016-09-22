@@ -2,7 +2,6 @@ var gulp = require("gulp");
 var publish = require("../modules/publish");
 var runSequence = require("run-sequence");
 var build = require("../build.js");
-var powershell = require("../modules/powershell");
 var path = require("path");
 var fs = require("fs")
 
