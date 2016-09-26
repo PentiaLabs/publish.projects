@@ -1,6 +1,6 @@
 {
-  "name": "publish-projects",
-  "version": "0.1.1",
+  "name": "@pentia/publish-projects",
+  "version": "0.1.2",
   "private": false,
   "description": "runs publish on csproj files via msbuild",
   "keywords": [
@@ -9,7 +9,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.git@github.com:PentiaLabs/Pentia.Builder.git"
+    "url": "https://github.com/PentiaLabs/publish.projects"
   },
   "maintainers": [
     "Pentia <dev@pentia.dk> (http://www.pentia.dk)"
@@ -40,9 +40,9 @@
     "gulp-rimraf": "^0.2.0"
   },
   "bugs": {
-    "url": "https://github.com/PentiaLabs/Pentia.Builder/issues"
+    "url": "https://github.com/PentiaLabs/publish.projects/issues"
   },
-  "homepage": "https://github.com/PentiaLabs/Pentia.Builder#readme",
+  "homepage": "https://github.com/PentiaLabs/publish.projects#readme",
   "main": "gulpfile.js",
   "author": "Emil Klein <eok@pentia.dk>",
   "license": "ISC"
