@@ -14,13 +14,18 @@ var tasks = path.join(__dirname, "gulp-tasks");
 var tasks = requireDir(tasks);
 
 var args = nopt({
-  "env"     : [String, null]
+  "env"     : [String, null],
+  "path"    : [String, null]
 });
 
 build.setEnvironment(args.env);
 
+gulp.task("deploy-all-to-folder", ["set-temp-output-folder","publish-all-layers"], function (callback) {
+
+}); 
+
 gulp.task("set-temp-output-folder", function (callback) {
-  var tmpDir = "./tmp";
+  var tmpDir = args.path;
   if (!fs.existsSync(tmpDir)){
     fs.mkdirSync(tmpDir);
   }
