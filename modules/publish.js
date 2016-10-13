@@ -3,6 +3,7 @@ var build = require("../build.js");
 var foreach = require("gulp-foreach");
 var msbuild = require("gulp-msbuild");
 var debug = require("gulp-debug");
+var path = require("path");
 
 function Publish () {
 }
