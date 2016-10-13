@@ -9,6 +9,12 @@ function Publish () {
 
 Publish.prototype.publishProjects = function (location, dest) {
   dest = dest || build.config.websiteRoot;
+
+  if(!path.isAbsolute(dest))
+  {
+    dest = path.join(process.cwd(),dest);
+  }
+
   console.log("publish to " + dest + " folder");
   return gulp.src([location + "/**/*.csproj", "!" + location + "/**/*Tests.csproj", +location + "/**/*Test.csproj", "!" + location + "/**/*Specflow.csproj"])
     .pipe(foreach(function (stream, file) {
