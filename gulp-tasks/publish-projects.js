@@ -21,5 +21,13 @@ gulp.task("publish-all-layers", function (callback) {
   runSequence(
     "publish-context-layer",
     "publish-feature-layer",
+    "publish-foundation-layer",
+    "remove-configtransforms", callback);
+});
+
+gulp.task("publish-all-layers-with-transforms", function (callback) {
+  runSequence(
+    "publish-context-layer",
+    "publish-feature-layer",
     "publish-foundation-layer", callback);
 });
