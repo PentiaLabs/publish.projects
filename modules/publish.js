@@ -18,11 +18,9 @@ Publish.prototype.publishProjects = function (location, dest) {
 
   console.log("publish to " + dest + " folder");
   return gulp.src([location + "/**/*.csproj", "!" + location + "/**/*Tests.csproj", +location + "/**/*Test.csproj", "!" + location + "/**/*Specflow.csproj"])
-    .pipe(foreach(function (stream, file) {
-      return stream
-        .pipe(debug({ title: "Building project:" }))
+    .pipe(debug({ title: "Building project:" }))
         .pipe(msbuild({
-          targets: ["Clean", "Build"],
+          targets: ["WebPublish"],
           configuration: build.config.name,
           logCommand: false,
           stderr: build.solutionConfiguration.msbuild.showError,
@@ -39,7 +37,6 @@ Publish.prototype.publishProjects = function (location, dest) {
             _FindDependencies: "false"
           }
         }));
-    }));
 };
 
 exports = module.exports = new Publish();
