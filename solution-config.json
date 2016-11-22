@@ -6,7 +6,9 @@
       "showError": false,
       "showStandardOutput": false,
       "toolsversion": 14.0,
-      "verbosity": "minimal"
+      "verbosity": "minimal",
+      "maxcpucount": 0,
+      "nodeReuse": true
     },
     "frontendBuilder": {
       "location": "./src/context/frontend/frontend"

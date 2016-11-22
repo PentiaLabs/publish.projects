@@ -16,6 +16,18 @@ Publish.prototype.publishProjects = function (location, dest) {
     dest = path.join(process.cwd(),dest);
   }
 
+  //Added for backwards compatibility - wasnt added in config before 0.1.8
+  if(!build.solutionConfiguration.msbuild.nodeReuse)
+  {
+    build.solutionConfiguration.msbuild.nodeReuse = false;
+  }
+
+  //Added for backwards compatibility - wasnt added in config before 0.1.8
+  if(!build.solutionConfiguration.msbuild.maxcpucount)
+  {
+    build.solutionConfiguration.msbuild.maxcpucount = 0;
+  }
+
   console.log("publish to " + dest + " folder");
   return gulp.src([location + "/**/*.csproj", "!" + location + "/**/*Tests.csproj", +location + "/**/*Test.csproj", "!" + location + "/**/*Specflow.csproj"])
     .pipe(foreach(function (stream, file) {
@@ -28,7 +40,8 @@ Publish.prototype.publishProjects = function (location, dest) {
           stderr: build.solutionConfiguration.msbuild.showError,
           stdout: build.solutionConfiguration.msbuild.showStandardOutput,
           verbosity: build.solutionConfiguration.msbuild.verbosity,
-          maxcpucount: 0,
+          maxcpucount: build.solutionConfiguration.msbuild.maxcpucount,
+          nodeReuse: build.solutionConfiguration.msbuild.nodeReuse,
           toolsVersion: build.solutionConfiguration.msbuild.toolsversion,
           properties: {
             DeployOnBuild: "true",
