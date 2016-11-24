@@ -17,8 +17,13 @@ gulp.task("publish-context-layer", function () {
     return publish.publishProjects("./src/Context");
 });
 
+gulp.task("publish-project-layer", function () {
+    return publish.publishProjects("./src/Project");
+});
+
 gulp.task("publish-all-layers", function (callback) {
   runSequence(
+    "publish-project-layer",
     "publish-context-layer",
     "publish-feature-layer",
     "publish-foundation-layer",
@@ -27,6 +32,7 @@ gulp.task("publish-all-layers", function (callback) {
 
 gulp.task("publish-all-layers-with-transforms", function (callback) {
   runSequence(
+    "publish-project-layer",
     "publish-context-layer",
     "publish-feature-layer",
     "publish-foundation-layer", callback);
