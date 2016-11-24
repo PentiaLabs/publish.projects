@@ -1,7 +1,4 @@
 {
-    "configurationTransform": {
-      "AlwaysApplyName": "always"
-    },
     "msbuild": {
       "showError": false,
       "showStandardOutput": false,
@@ -9,9 +6,6 @@
       "verbosity": "minimal",
       "maxcpucount": 0,
       "nodeReuse": true
-    },
-    "frontendBuilder": {
-      "location": "./src/context/frontend/frontend"
     },
     "configs": [
       {
