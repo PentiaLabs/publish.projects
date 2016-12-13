@@ -10,10 +10,6 @@ function DeleteIfConfigTransformFile($file)
             Write-Host "Deleting file:" $file
             Remove-Item $file
         }
-        else
-        {
-            Write-Host "Not deleting config file (doesn't have the correct xdt xml namespace declaration):" $file
-        }
     }
     catch
     {
