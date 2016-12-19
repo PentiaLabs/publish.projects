@@ -49,7 +49,8 @@ Publish.prototype.publishProjects = function (location, dest) {
             WebPublishMethod: "FileSystem",
             DeleteExistingFiles: "false",
             publishUrl: dest,
-            _FindDependencies: "false"
+            _FindDependencies: "false",
+            MSDeployUseChecksum: "true"
           }
         }));
     }));
