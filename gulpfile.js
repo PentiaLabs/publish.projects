@@ -9,6 +9,7 @@ var runSequence = require("run-sequence");
 var build = require("./build.js");
 var fs = require('fs');
 var powershell = require("./modules/powershell");
+var publish = require("./modules/publish");
 var config = build.config;
 
 var tasks = path.join(__dirname, "gulp-tasks");
@@ -55,3 +56,4 @@ gulp.task("default", function () {
 	console.log("You need to specifiy a task.");
 });
 
+exports.publish = publish
