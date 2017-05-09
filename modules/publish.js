@@ -51,7 +51,8 @@ Publish.prototype.publishProjects = function (location, dest) {
             publishUrl: dest,
             _FindDependencies: "false",
             MSDeployUseChecksum: "true"
-          }
+          },
+          fileLoggerParameters: 'LogFile=publish.log;Append;Verbosity='+build.solutionConfiguration.msbuild.verbosity
         }));
     }));
 };
